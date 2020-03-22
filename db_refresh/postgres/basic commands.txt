@@ -1,0 +1,63 @@
+Create DB:
+	CREATE DATABASE database_name;
+
+List DB:
+	\l
+
+View DB:
+	\d
+
+Describe DB:
+	\d table_name
+
+Connect DB:
+	\c database_name
+
+Delete DB:
+	DROP DATABASE database_name;
+______________________________________________
+
+Create Table:
+	CREATE TABLE table_name (
+		column_name + data_type + constraints
+	);
+
+	/////////////////////////////////////////////////
+
+	CREATE TABLE person (
+		id int,
+		first_name VARCHAR(50),
+		last_name VARCHAR(50),
+		gender VARCHAR(6),
+		date_of_birth TIMESTAMP,
+	);
+
+	/////////////////////////////////////////////////
+
+	CREATE TABLE person (
+		id BIGSERIAL NOT NULL PRIMARY KEY,
+		first_name VARCHAR(50) NOT NULL,
+		last_name VARCHAR(50) NOT NULL,
+		gender VARCHAR(6) NOT NULL,
+		date_of_birth TIMESTAMP NOT NULL,
+	);
+
+______________________________________________
+
+Select Table:
+	SELECT * FROM table_name;
+
+______________________________________________
+
+Order by:
+	ASC => Ascending order
+	DESC => Decending order
+	
+	SELECT * FROM table_name ORDER BY column_name;
+	//////
+	SELECT * FROM table_name ORDER BY column_name DESC;
+
+______________________________________________
+
+Distinct:
+	SELECT DISTINCT country_of_birth FROM person ORDER BY country_of_birth;
