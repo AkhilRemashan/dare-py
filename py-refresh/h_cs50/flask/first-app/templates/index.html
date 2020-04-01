@@ -1,22 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>new year app</title>
-    <style>
-        body{
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    {% if new_year %}
-    <h2>Yes, It's New Year</h2>
-    {% else %}
-    <h2>No, It's not</h2>
-    {% endif %}
+{% extends "layout.html" %}
 
+{% block heading %}
+    Submit Form
+{% endblock %}
 
-</body>
-</html>
+{% block body %}
+    <form action="{{ url_for='hello' }}" methods="post">
+        <input type="text" name="name" placeholder="Enter name">
+        <button>Submit</button>
+    </form>
+{% endblock %}
