@@ -1,0 +1,13 @@
+create virtualenv:-
+    virtualenv -p python3 .
+
+
+activate virtualenv:-
+    source bin/activate (Linux)
+    .\Script\activate (Win opt1)
+    scripts\activate (Win opt2)
+
+
+
+install django:-
+    pip install django==2.0.7
