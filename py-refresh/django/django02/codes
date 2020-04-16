@@ -8,6 +8,13 @@ activate virtualenv:-
     scripts\activate (Win opt2)
 
 
-
 install django:-
     pip install django==2.0.7
+
+
+run server:-
+    python manage.py runserver
+
+
+run/sync database:-
+    python manage.py migrate
