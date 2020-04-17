@@ -18,3 +18,5 @@ run server:-
 
 run/sync database:-
     python manage.py migrate
+
+editing secret key
