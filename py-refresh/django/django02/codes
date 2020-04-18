@@ -23,3 +23,9 @@ run/sync database:-
 creating superuser:-
     python manage.py createsuperuser 
     (admin-learncode)
+
+creating custom app components:-
+    python manage.py startapp <app name>
+
+make migration:-
+    python manage.py makemygrations
