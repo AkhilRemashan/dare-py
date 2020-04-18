@@ -19,4 +19,7 @@ run server:-
 run/sync database:-
     python manage.py migrate
 
-editing secret key
+
+creating superuser:-
+    python manage.py createsuperuser 
+    (admin-learncode)
