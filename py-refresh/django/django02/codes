@@ -28,4 +28,10 @@ creating custom app components:-
     python manage.py startapp <app name>
 
 make migration:-
-    python manage.py makemygrations
+    python manage.py makemigrations
+
+
+$$$$$$$$$$$$$$$$$$$$BUG FIXES$$$$$$$$$$$$$$$$$$$$
+
+? sqlite3 unable to load table
+> https://stackoverflow.com/questions/23708895/how-to-upgrade-django 
