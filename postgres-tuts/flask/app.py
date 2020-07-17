@@ -1,9 +1,28 @@
 from flask import Flask, render_template
 app = Flask(__name__)
 
+posts = [
+    {
+        'title' : 'Post 1',
+        'content' : 'This is the content for post 1'
+    },
+    {
+        'title' : 'Post 2',
+        'content' : 'This is the content for post 2'
+    },
+    {
+        'title' : 'Post 3',
+        'content' : 'This is the content for post 3'
+    },
+]
+
 @app.route('/')
 def index_page():
     return render_template('index.html')
+#
+@app.route('/posts') 
+def all_posts():
+    return render_template('posts.html', posts=posts)
 #
 @app.route('/multi-line')
 def hello_world():
