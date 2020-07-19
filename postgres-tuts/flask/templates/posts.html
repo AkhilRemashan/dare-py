@@ -11,6 +11,13 @@
     {% for post in posts %}
 
         <h3>{{ post.title }}</h3>
+
+            {% if post.author %}
+                <h5>By: {{ post.author }}</h5>
+            {% else %}    
+                <h5>By: N/a</h5>
+            {% endif %}
+
         <p>{{ post.content }}</p>
 
     {% endfor%}

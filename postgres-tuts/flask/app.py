@@ -4,7 +4,8 @@ app = Flask(__name__)
 posts = [
     {
         'title' : 'Post 1',
-        'content' : 'This is the content for post 1'
+        'content' : 'This is the content for post 1',
+        'author' : 'Akil'
     },
     {
         'title' : 'Post 2',
@@ -12,7 +13,8 @@ posts = [
     },
     {
         'title' : 'Post 3',
-        'content' : 'This is the content for post 3'
+        'content' : 'This is the content for post 3',
+        'author' : 'Jane'
     },
 ]
 
