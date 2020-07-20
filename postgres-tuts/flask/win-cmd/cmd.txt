@@ -1,0 +1,2 @@
+# SQLAlchemy
+pip install flask-sqlalchemy
