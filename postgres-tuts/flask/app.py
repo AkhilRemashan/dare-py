@@ -39,7 +39,7 @@ posts = [
 def index_page():
     return render_template('index.html')
 #
-@app.route('/posts') 
+@app.route('/posts', methods=['GET', 'POST']) 
 def all_posts():
     return render_template('posts.html', posts=posts)
 #
