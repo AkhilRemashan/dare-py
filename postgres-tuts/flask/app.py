@@ -18,29 +18,29 @@ class BlogPost(db.Model):
 
 
 
-posts = [
-    {
-        'title' : 'Post 1',
-        'content' : 'This is the content for post 1',
-        'author' : 'Akil'
-    },
-    {
-        'title' : 'Post 2',
-        'content' : 'This is the content for post 2'
-    },
-    {
-        'title' : 'Post 3',
-        'content' : 'This is the content for post 3',
-        'author' : 'Jane'
-    },
-]
+# posts = [
+#     {
+#         'title' : 'Post 1',
+#         'content' : 'This is the content for post 1',
+#         'author' : 'Akil'
+#     },
+#     {
+#         'title' : 'Post 2',
+#         'content' : 'This is the content for post 2'
+#     },
+#     {
+#         'title' : 'Post 3',
+#         'content' : 'This is the content for post 3',
+#         'author' : 'Jane'
+#     },
+# ]
 
 @app.route('/')
 def index_page():
     return render_template('index.html')
 #
 @app.route('/posts', methods=['GET', 'POST']) 
-def all_posts():
+def posts():
     if request.method == 'POST': 
         post_title = request.form['title']
         post_content = request.form['content']
@@ -49,7 +49,7 @@ def all_posts():
         db.session.commit()
         return redirect('/posts')
     else:
-        all_posts = BlogPost.query.order_by(BlogPost.date_posted).all()
+        posts = BlogPost.query.order_by(BlogPost.date_posted).all()
         return render_template('posts.html', posts=posts)
 #
 @app.route('/multi-line')
