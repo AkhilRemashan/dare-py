@@ -14,7 +14,7 @@ class BlogPost(db.Model):
     date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
 
     def __repr__(self):
-        return 'BLog post ' + str(self.id)
+        return 'Blog post ' + str(self.id)
 
 
 
