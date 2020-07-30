@@ -14,33 +14,44 @@
     <hr>
 
     <h3>Create New Post</h3>
+    <br>
     <form action='/posts' method='POST'>
-        Title: <input type="text" name="title" id="title">
+        Title: 
+        <!-- <input type="text" name="title" id="title"> -->
+        <input class="form-control" type="text" name="title" id="title" placeholder="Enter title" aria-label="Enter title">
         <br>
-        Author: <input type="text" name="author" id="author">
+        Author: 
+        <!-- <input type="text" name="author" id="author"> -->
+        <input class="form-control" type="text" name="author" id="author" placeholder="Author name" aria-label="Author name">
         <br>
-        Post: <input type="text" name="content" id="content">
+        Post: 
+        <!-- <input type="text" name="content" id="content"> -->
+        <textarea class="form-control" type="text" name="content" id="content" rows="3" placeholder="Enter content"></textarea>
+
         <br>
-        <input type="submit" value="post">
+        <input type="submit"  class="btn btn-primary" value="Post Content">
     </form>
     <hr>
     <!--  -->
     <br /><br />
 
     {% for post in posts %}
-
+    <br /><br /><br />
         <h3>{{ post.title }}</h3>
-
             {% if post.author %}
-                <h5>By: {{ post.author }}</h5>
+                <small>
+                    Written by {{ post.author }} on {{ post.date_posted }}
+                </small>
             {% else %}    
-                <h5>By: N/a</h5>
+                <small>
+                    Written by <em>Unknown</em> on {{ post.date_posted }}
+                </small>
             {% endif %}
 
-        <p>{{ post.content }}</p>
+        <p style="white-space: pre-wrap;">{{ post.content }}</p>
         <br>
-        <a href="/posts/delete/{{ post.id }}">Delete</a>
-        <a href="/posts/edit/{{ post.id }}">Edit</a>
+        <a class="btn btn-danger" href="/posts/delete/{{ post.id }}">Delete</a>
+        <a class="btn btn-primary" href="/posts/edit/{{ post.id }}">Edit</a>
 
     <hr>
     {% endfor%}
