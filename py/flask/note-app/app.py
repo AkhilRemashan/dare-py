@@ -3,14 +3,6 @@ import datetime
 
 app = Flask('__name__')
 
-# @app.route("/")
-# def index():
-#     return "Hey, there!"
-
-# @app.route("/<string:name>")
-# def name(name):
-#     name = name.capitalize()
-#     return f"<h4>Hey, {name} !!!</h4>"
 
 @app.route("/")
 def index():
@@ -24,3 +16,15 @@ def newyear():
     newyear = today.month == 1 and today.date == 1
     return render_template("ny.html", newyear=newyear)
 
+
+# 
+# Route Test
+
+# @app.route("/")
+# def index():
+#     return "Hey, there!"
+
+# @app.route("/<string:name>")
+# def name(name):
+#     name = name.capitalize()
+#     return f"<h4>Hey, {name} !!!</h4>"
