@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Is it New Year?</title>
+    <title>List names</title>
 </head>
 <body>
-    {% if newyear %}
-        <h3>Yo! Happy New Year!!</h3>
-    {% else %}
-        <h3>NO :((</h3>
-    {% endif %}
+    {% for name in names %}
+        <ul>
+            <li>{{ name }}</li>
+        </ul>
+    {% endfor %}
 
 </body>
 </html>

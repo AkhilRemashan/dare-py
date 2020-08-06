@@ -16,6 +16,12 @@ def newyear():
     newyear = today.month == 1 and today.date == 1
     return render_template("ny.html", newyear=newyear)
 
+# LOOPING LIST
+@app.route("/list")
+def listing():
+    names = ["Alice", "Bob", "Cache"]
+    return render_template("list.html", names=names)
+
 
 # 
 # Route Test
