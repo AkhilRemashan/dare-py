@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import datetime
 
 app = Flask('__name__')
@@ -21,6 +21,12 @@ def newyear():
 def listing():
     names = ["Alice", "Bob", "Cache"]
     return render_template("list.html", names=names)
+
+# FORM SUBMISSION
+@app.route("/hello", methods=["POST"])
+def hello():
+    name = request.form.get("name")
+    return render_template("hello.html", name=name)
 
 
 # 
