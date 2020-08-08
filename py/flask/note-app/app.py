@@ -23,6 +23,9 @@ def listing():
     return render_template("list.html", names=names)
 
 # FORM SUBMISSION
+@app.route("/form")
+def form():
+    return render_template("form.html")
 @app.route("/hello", methods=["POST"])
 def hello():
     name = request.form.get("name")
