@@ -1,9 +1,28 @@
 
 <!-- String Interpolatopn -->
 Hello there, I'm {{ myName }}
-
+<br>
 <!-- Calling Function -->
 <button (click)="callFunc1()">Call Function</button>
-
+<br>
 <!-- Two-way Databinding -->
-<input type="text" [value]=" ">
+<input type="text" [value]="text" (input)="updateValue($event)">
+{{ text }}
+<br>
+<!-- NgModule - Two-way Databinding -->
+<input [(ngModel)]="ngmText">
+{{ ngmText }}
+<br>
+<!-- ngFor -->
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Subject</th>
+        <th>Online</th>
+    </tr>
+    <tr *ngFor="let data from studentData">
+        <td>{{ studentData.name }}</td>
+        <td>{{ studentData.subject }}</td>
+        <td>{{ studentData.online }}</td>
+    </tr>
+</table>

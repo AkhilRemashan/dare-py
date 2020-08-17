@@ -9,6 +9,35 @@ export class PlayComponent implements OnInit {
 
   myName = "Akhil"
 
+  text="hey, there!"
+
+  ngmText = "ola!"
+
+  studentData = [
+    {
+      name : "Joseph",
+      subject : "Economics",
+      online : true
+    },
+    {
+      name : "Vladimir",
+      subject : "Mathematics",
+      online : false
+    },
+    {
+      name : "Annie",
+      subject : "Computer Science",
+      online : true
+    },
+    {
+      name : "Eugene",
+      subject : "Chemistry",
+      online : true
+    },
+  ]
+
+
+
   constructor() { }
 
   ngOnInit(): void {
@@ -18,4 +47,9 @@ export class PlayComponent implements OnInit {
     console.log("function called")
   }
 
+  updateValue(e){
+    this.text = e.target.value
+    // console.log(e)
+  }
+  
 }
