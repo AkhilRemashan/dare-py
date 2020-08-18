@@ -16,13 +16,15 @@ Hello there, I'm {{ myName }}
 <!-- ngFor -->
 <table>
     <tr>
+        <th>SI No</th>
         <th>Name</th>
         <th>Subject</th>
         <th>Online</th>
     </tr>
-    <tr *ngFor="let data from studentData">
-        <td>{{ studentData.name }}</td>
-        <td>{{ studentData.subject }}</td>
-        <td>{{ studentData.online }}</td>
+    <tr *ngFor="let record of records; let indexNo = index">
+        <td>{{ indexNo + 1 }}</td>
+        <td>{{ record.name }}</td>
+        <td>{{ record.subject }}</td>
+        <td>{{ record.online }}</td>
     </tr>
 </table>

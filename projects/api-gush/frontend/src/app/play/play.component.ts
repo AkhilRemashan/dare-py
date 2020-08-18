@@ -13,7 +13,24 @@ export class PlayComponent implements OnInit {
 
   ngmText = "ola!"
 
-  studentData = [
+  
+
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  callFunc1(){
+    console.log("function called")
+  }
+
+  updateValue(e){
+    this.text = e.target.value
+    // console.log(e)
+  }
+
+  records = [
     {
       name : "Joseph",
       subject : "Economics",
@@ -36,20 +53,5 @@ export class PlayComponent implements OnInit {
     },
   ]
 
-
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-  callFunc1(){
-    console.log("function called")
-  }
-
-  updateValue(e){
-    this.text = e.target.value
-    // console.log(e)
-  }
   
 }
