@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Hasty | Create, Host and Share Professional Resume{% endblock %}
+{% block compstyle %}<link rel="stylesheet" href="/static/components/home_page.css">{% endblock %}
+{% block pagebody %}
+    {% block pagenavigation %}
+        {% include '/page_navigation.html' ignore missing %}
+    {% endblock %}
+    {% block pagecontent %}
+        <div class="home-banner columns">
+            <div class="column is-12">
+                <h2 class="title">Register</h2>
+                <form method="POST" action="/">
+                    <div class="form-field">{{ register.name.label }} {{ register.name(size=20) }}</div>
+                    <div class="form-field">{{ register.email.label }} {{ register.email }}</div>
+                    {{ register.submit }}
+                </form>   
+            </div>
+        </div>
+    {% endblock %}
+    {% block pagefooter %}
+        {% include '/page_footer.html' ignore missing %}
+    {% endblock %}
+   
+{% endblock %}
+
