@@ -1,0 +1,8 @@
+# CREATE PROJECT
+  django-admin startproject <PROJECT NAME> .
+
+# RUN PROJECT
+  python manage.py runserver
+
+# MIGRATE
+  python manage.py migrate
