@@ -6,3 +6,13 @@
 
 # MIGRATE
   python manage.py migrate
+
+# CREATE USERS
+    => Creating SuperUser ([current]root, rockdjango)
+    python manage.py createsuperuser
+
+# CREATE APP
+  python manage.py startapp <APP NAME>
+
+# MAKE MIGRATIONS
+  python manage.py makemigrations
