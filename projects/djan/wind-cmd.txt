@@ -8,7 +8,7 @@
   python manage.py migrate
 
 # CREATE USERS
-    => Creating SuperUser ([current]root, rockdjango)
+    => Creating SuperUser ([current]root1, rockdjango)
     python manage.py createsuperuser
 
 # CREATE APP
@@ -16,3 +16,14 @@
 
 # MAKE MIGRATIONS
   python manage.py makemigrations
+
+# OPEN SHELL
+  python manage.py shell
+
+# SHELL COMMANDS (eg: Products Class)
+    => IMPORTING CLASS  
+       from <APP NAME>.models import <CLASS>
+    => LISTING IMPORTED 
+       <CLASS>.objects.all()
+    => CREATE NEW OBJECT (KEYS ARE ATTRIBUTES)
+       <CLASS>.objects.create(KEY='VALUE')
