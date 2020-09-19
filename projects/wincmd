@@ -1,0 +1,5 @@
+> PIP file and Virtualenv
+= pipenv shell
+
+> Install django djangorestframework django-rest-knox
+= pipenv install django djangorestframework django-rest-knox
