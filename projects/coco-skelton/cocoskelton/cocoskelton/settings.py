@@ -77,15 +77,15 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 
-        'NAME': ‘<db_name>’,
+        'NAME': 'cocoskelton',
 
-        'USER': '<db_username>',
+        'USER': 'postgres',
 
-        'PASSWORD': '<password>',
+        'PASSWORD': 'pg123',
 
-        'HOST': '<db_hostname_or_ip>',
+        'HOST': '127.0.0.1',
 
-        'PORT': '<db_port>',
+        'PORT': '5432',
     }
 }
 
