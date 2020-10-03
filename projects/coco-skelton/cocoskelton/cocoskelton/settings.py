@@ -75,17 +75,17 @@ WSGI_APPLICATION = 'cocoskelton.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
 
-        'NAME': 'cocoskelton',
+        # 'NAME': 'cocoskelton',
 
-        'USER': 'postgres',
+        # 'USER': 'postgres',
 
-        'PASSWORD': 'pg123',
+        # 'PASSWORD': 'pg123',
 
-        'HOST': '127.0.0.1',
+        # 'HOST': '127.0.0.1',
 
-        'PORT': '5432',
+        # 'PORT': '5432',
     }
 }
 
