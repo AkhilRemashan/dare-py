@@ -11,9 +11,17 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
+# from os.path import join
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+TEMPLATES_DIRS = os.path.join(BASE_DIR,'templates')
+# TEMPLATE_DIRS = (
+#     join(BASE_DIR,  'templates'),
+# )
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -55,7 +63,9 @@ ROOT_URLCONF = 'cocoproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        # 
+        'DIRS': [TEMPLATE_DIRS],
+        # 
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
