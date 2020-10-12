@@ -1,0 +1,23 @@
+# VIRTUAL ENV
+virtualenv <ENV NAME>
+
+# ACTIVATE ENV
+<ENV NAME>\Scripts\activate
+
+# INSTALL DJANGO
+pip install django
+
+# INSTALL DJANGO REST FRAMEWORK
+pip install djangorestframework
+
+# CREATE PROJECT
+django-admin startproject <PROJECT NAME>
+
+# RUN PROJECT
+python manage.py runserver
+
+# MIGRATING CHANGES
+python manage.py migrate
+
+# CREATING APP
+python manage.py startapp articles
