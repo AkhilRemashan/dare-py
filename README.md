@@ -1,1 +1,1 @@
-# jo-essentials
+# Essentials of python and backend technologies
