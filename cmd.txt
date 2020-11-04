@@ -1,0 +1,11 @@
+#   Install PIPENV
+    pip3 install pipenv
+
+#   Run PIPENV SHELL
+    pipenv shell
+
+#   Installing FLASK, FLASK-SQLALCHEMY, FLASK-MARSHMALLOW, MARSHMALLOW-SQLALCHEMY
+    pipenv install flask flask-sqlalchemy flask-marshmallow marshmallow-sqlalchemy
+
+#   Create APP.PY
+    touch app.py
