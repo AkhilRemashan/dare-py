@@ -1,1 +1,1 @@
-# Essentials of python and backend technologies
+# Essentials backend technologies
